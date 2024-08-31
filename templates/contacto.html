@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  <title>Edef-Contacto</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a class="navbar-logo" href="/">Edef portfolio</a>
+        <ul class="navbar-menu">
+          <li class="navbar-item"><a href="/">Inicio</a></li>
+          <li class="navbar-item"><a href="/juegos-index">Juegos</a></li>
+          <li class="navbar-item"><a href="/contacto">Contacto</a></li>
+          <li class="navbar-item"><a href="#">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="contacto-container">
+    <div class="contact-form">
+        <span class="heading">Contactame!</span>
+        <form id="contactForm" method="post">
+          <label for="name">Nombre:</label>
+          <input type="text" required="" id="nombre" name="nombre">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required="">
+          <label for="name">Asunto:</label>
+          <input type="text" required="" id="asunto" name="asunto">
+          <label for="message">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required=""></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>      
+  </div>  
+</body>
+</html>

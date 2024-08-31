@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/juegos-index-style.css') }}">
+  <script src="{{url_for('static', filename='juegos-index-script.js')}}"></script>
+  <title>Edef-Juegos</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a class="navbar-logo" href="/">Edef portfolio</a>
+        <ul class="navbar-menu">
+          <li class="navbar-item"><a href="/">Inicio</a></li>
+          <li class="navbar-item"><a href="/juegos-index">Juegos</a></li>
+          <li class="navbar-item"><a href="/contacto">Contacto</a></li>
+          <li class="navbar-item"><a href="#">Other</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="cards-container">
+    <a href="/answersGame" class="card" id="preguntados-card" onclick="gameRequest('preguntados-card')">Preguntados</a>
+    <div class="card" id="snake-card" onclick="gameRequest('snake-card')">Snake</div>
+    <div class="card" id="bla-card" onclick="gameRequest('bla-card')">BLA</div>  
+  </div>
+</body>
+</html>

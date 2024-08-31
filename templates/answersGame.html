@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/answersGameStyle.css') }}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+    <title>Preguntados</title>
+</head>
+<body onload="setOptionsText()">
+  <div id="questionText">
+    Pregunta o afirmacion a responder con opciones
+  </div>
+  <div class="answersCheck">
+    <div class="firstOptionContainer">
+      <input type="checkbox" class="cb"  id="firstCheckbox" onchange="cbChange(this)">
+      <label for="firstCheckbox" id="1">First option</label>
+    </div>
+    <div class="secondOptionContainer">
+      <input type="checkbox" class="cb" id="secondCheckbox" onchange="cbChange(this)">
+      <label for="secondCheckbox" id="2">Second option </label>
+    </div>
+    <div class="thirdOptionContainer">
+      <input type="checkbox" class="cb" id="thirdCheckbox" onchange="cbChange(this)">
+      <label for="thirdCheckbox" id="3">Third option</label>
+    </div>
+    <div class="fourthOptionContainer">
+      <input type="checkbox" class="cb" id="fourthCheckbox" onchange="cbChange(this)">
+      <label for="fourthCheckbox" id="4">Fourth option</label>
+    </div>
+  </div>
+  <div class="btn">
+    <button onclick="fetchObjetcChecked()">SEND</button>
+  </div>
+</body>
+</html>

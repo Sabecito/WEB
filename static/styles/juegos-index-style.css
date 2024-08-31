@@ -1,0 +1,158 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: "Exo", sans-serif;
+    color: #fff;
+    background: linear-gradient(-45deg, #831111, #000000, #045750, #1c1c53);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  header {
+      background-color: rgb(41, 41, 41);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+  ul{
+    list-style-type: none;
+  }
+  
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      padding: 0 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+      opacity: 80%;
+    }
+    
+    .navbar-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .navbar-logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .navbar-menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+    }
+    
+    .navbar-item {
+      margin: 0 10px;
+    }
+    
+    .navbar-item a {
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+    
+    .navbar-item a:hover {
+      color: #ff6384;
+    }
+
+.cards-container{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 15%;
+    justify-content: center;
+}
+
+#snake-card{
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+a::after{
+  text-decoration: none;
+  color: white;
+}
+
+.card {
+    position: relative;
+    width: 220px;
+    height: 320px;
+    background: #520a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+  
+  .card::before,
+  .card::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #003833;
+    transition: all 0.5s;
+  }
+  
+  .card::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+  }
+  
+  .card::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100%  0 15px;
+  }
+  
+  .card:hover::before,
+  .card:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+  }
+  
+  .card:hover:after {
+    content: "Jugar!";
+  }

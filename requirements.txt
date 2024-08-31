@@ -1,0 +1,4 @@
+flask
+pandas
+flask_mysqldb
+flask_mail
